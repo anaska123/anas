@@ -1,6 +1,7 @@
 {
-  "name": "portfolio-api",
+  "name": "anas-portfolio",
   "version": "1.0.0",
+  "description": "Portfolio backend for managing projects",
   "main": "server.js",
   "scripts": {
     "start": "node server.js"
@@ -9,15 +10,18 @@
     "express": "^4.18.2",
     "mongoose": "^7.5.0",
     "cors": "^2.8.5"
-  }
-}
-
+  },
+  "engines": {
+    "node": "22.x"
+  },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/anaska123/full-stack.git"
+    "url": "https://github.com/anaska123/anas"
   },
-  "author": "anas",
-  "license": "ISC",
+  "author": "Anas",
+  "license": "ISC"
+}
+
   "bugs": {
     "url": "https://github.com/anaska123/full-stack/issues"
   },
