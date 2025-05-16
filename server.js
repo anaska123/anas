@@ -70,7 +70,7 @@ app.delete('/api/projects/:id', async (req, res) => {
 
 // ✅ Serve your frontend page
 app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, 'public', 'pgprojects.html')); // Or pgcontact.html, adjust as needed
+  res.sendFile(path.join(__dirname, 'public', 'pghome.html')); // Or pgcontact.html, adjust as needed
 });
 
 // ✅ Start the server
