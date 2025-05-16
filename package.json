@@ -1,12 +1,17 @@
 {
-  "name": "my-portfolio",
+  "name": "portfolio-api",
   "version": "1.0.0",
-  "description": "",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
   },
+  "dependencies": {
+    "express": "^4.18.2",
+    "mongoose": "^7.5.0",
+    "cors": "^2.8.5"
+  }
+}
+
   "repository": {
     "type": "git",
     "url": "git+https://github.com/anaska123/full-stack.git"
