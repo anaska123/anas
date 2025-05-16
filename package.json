@@ -19,11 +19,9 @@
     "url": "https://github.com/anaska123/anas"
   },
   "author": "Anas",
-  "license": "ISC"
-}
-
+  "license": "ISC",
   "bugs": {
-    "url": "https://github.com/anaska123/full-stack/issues"
+    "url": "https://github.com/anaska123/anas/issues"
   },
-  "homepage": "https://github.com/anaska123/full-stack#readme"
+  "homepage": "https://github.com/anaska123/anas#readme"
 }
