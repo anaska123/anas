@@ -2,120 +2,135 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Biodata | Anas</title>
-  <link rel="stylesheet" href="style.css" />
   <style>
+    /* Base */
+    * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: #f5f5f5;
-      margin: 0;
-      padding: 0;
+      background: linear-gradient(135deg, #00c9a7, #92fe9d);
+      min-height: 100vh;
+      color: #222;
     }
 
+    /* Navigation */
     nav {
-      background: #333;
-      padding: 15px;
+      background: rgba(0,0,0,0.85);
+      padding: 15px 0;
       text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
     }
-
     nav a {
-      color: white;
-      margin: 0 15px;
+      color: #fff;
+      margin: 0 20px;
       text-decoration: none;
-      font-weight: bold;
-      transition: color 0.3s ease;
+      font-weight: 600;
+      font-size: 16px;
+      transition: all 0.3s ease;
     }
-
     nav a:hover {
-      color: #00c9a7;
+      color: #ffde59;
+      transform: scale(1.1);
       text-decoration: underline;
     }
 
+    /* Marquee */
     marquee {
-      background-color: #000;
-      color: white;
+      background-color: rgba(0,0,0,0.9);
+      color: #fff;
       padding: 12px 0;
       font-size: 18px;
       font-weight: bold;
-      width: 100%;
-      font-family: monospace;
-      border-bottom: 2px solid #00c9a7;
+      font-family: 'Courier New', monospace;
+      border-bottom: 3px solid #ffde59;
     }
 
+    /* Section */
     section {
-      max-width: 850px;
+      max-width: 900px;
       margin: 60px auto;
-      background: white;
-      padding: 40px 30px;
-      border-radius: 10px;
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+      background: rgba(255,255,255,0.95);
+      padding: 50px 40px;
+      border-radius: 16px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.15);
       text-align: center;
+      animation: fadeIn 1.5s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
     }
 
     h1 {
-      margin-bottom: 20px;
+      margin-bottom: 25px;
+      font-size: 36px;
       color: #222;
-      font-size: 32px;
-    }
-
-    hr {
-      margin: 25px auto;
-      width: 60%;
-      border: 1px solid #ccc;
+      border-bottom: 3px solid #00c9a7;
+      display: inline-block;
+      padding-bottom: 8px;
+      font-style: italic;
     }
 
     .profile-img {
-      width: 160px;
-      height: 160px;
+      width: 180px;
+      height: 180px;
       border-radius: 50%;
       object-fit: cover;
       margin-bottom: 25px;
-      border: 4px solid #00c9a7;
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-      transition: transform 0.3s ease;
+      border: 5px solid #00c9a7;
+      box-shadow: 0 6px 25px rgba(0,0,0,0.25);
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
     }
-
     .profile-img:hover {
-      transform: scale(1.05);
+      transform: scale(1.08);
+      box-shadow: 0 12px 35px rgba(0,0,0,0.35);
     }
 
+    /* Table */
     .biodata-table {
-      margin: 0 auto;
-      text-align: left;
-      font-size: 18px;
-      color: #444;
-      border-collapse: collapse;
+      margin: 30px auto;
       width: 100%;
-      max-width: 600px;
+      max-width: 650px;
+      border-collapse: collapse;
+      font-size: 18px;
+      color: #333;
     }
-
     .biodata-table td {
-      padding: 10px;
+      padding: 12px 15px;
       border-bottom: 1px solid #ddd;
+      transition: background 0.3s ease;
     }
-
+    .biodata-table tr:hover td {
+      background: rgba(0,201,167,0.1);
+    }
     .biodata-table td:first-child {
       font-weight: bold;
+      color: #00c9a7;
       width: 40%;
-      color: #222;
     }
 
+    /* Download Button */
     .download-btn {
       background-color: #00c9a7;
       color: white;
       font-size: 18px;
-      padding: 10px 20px;
+      padding: 12px 25px;
       border: none;
-      border-radius: 5px;
+      border-radius: 8px;
       cursor: pointer;
       text-decoration: none;
       display: inline-block;
-      margin-top: 20px;
-      transition: background-color 0.3s ease;
+      margin-top: 25px;
+      transition: background-color 0.3s ease, transform 0.3s ease;
     }
-
     .download-btn:hover {
       background-color: #008f7a;
+      transform: scale(1.05);
     }
   </style>
 </head>
@@ -130,64 +145,27 @@
   </nav>
 
   <marquee behavior="scroll" direction="left">
-  Welcome to <strong>Anas'</strong> Portfolio — where <em>creativity</em> meets <em>code</em>! Explore my journey, skills, and hands-on projects that combine design and functionality.
-</marquee>
-
+    Welcome to <strong>Anas'</strong> Portfolio — explore <em>skills</em>, <em>projects</em>, and my <em>journey in web development</em>!
+  </marquee>
 
   <section>
-    <img src="C:\Users\hp\Downloads\image.jpg.jpeg" alt="Profile Photo" class="profile-img" />
+    <img src="images.jfif" alt="Profile Photo" class="profile-img" />
 
-    <h1><i><b>Biodata</b></i></h1>
-    <hr>
-
+    <h1>Biodata</h1>
     <table class="biodata-table">
-      <tr>
-        <td>Full Name</td>
-        <td>Anas </td>
-      </tr>
-      <tr>
-        <td>Date of Birth</td>
-        <td>10 march 2007</td>
-      </tr>
-      <tr>
-        <td>Gender</td>
-        <td>Male</td>
-      </tr>
-      <tr>
-        <td>Nationality</td>
-        <td>Indian</td>
-      </tr>
-      <tr>
-        <td>Religion</td>
-        <td>Islam</td>
-      </tr>
-      <tr>
-        <td>Qualification</td>
-        <td>BCA (Bachelor of Computer Applications)</td>
-      </tr>
-      <tr>
-        <td>Skills</td>
-        <td>HTML, CSS, JavaScript, Python, UI Design</td>
-      </tr>
-      <tr>
-        <td>Languages Known</td>
-        <td>English, Hindi, Urdu</td>
-      </tr>
-      <tr>
-        <td>Hobbies</td>
-        <td>Gaming, Coding, Designing</td>
-      </tr>
-      <tr>
-        <td>Contact</td>
-        <td>anas@example.com | +91 9876543210</td>
-      </tr>
-      <tr>
-        <td>Address</td>
-        <td>123, Tech Street, New Delhi, India</td>
-      </tr>
+      <tr><td>Full Name</td><td>Anas</td></tr>
+      <tr><td>Date of Birth</td><td>10 March 2007</td></tr>
+      <tr><td>Gender</td><td>Male</td></tr>
+      <tr><td>Nationality</td><td>Indian</td></tr>
+      <tr><td>Religion</td><td>Islam</td></tr>
+      <tr><td>Qualification</td><td>BCA (Bachelor of Computer Applications)</td></tr>
+      <tr><td>Skills</td><td>HTML, CSS, JavaScript, Python, UI Design</td></tr>
+      <tr><td>Languages Known</td><td>English, Hindi, Urdu</td></tr>
+      <tr><td>Hobbies</td><td>Gaming, Coding, Designing</td></tr>
+      <tr><td>Contact</td><td>anas@example.com | +91 9876543210</td></tr>
+      <tr><td>Address</td><td>123, Tech Street, New Delhi, India</td></tr>
     </table>
 
-    <!-- Download Button -->
     <a href="#" class="download-btn" id="downloadBiodata">Download Biodata</a>
   </section>
 
@@ -195,7 +173,7 @@
     document.getElementById("downloadBiodata").addEventListener("click", function() {
       const biodataContent = `
 Full Name: Anas
-Date of Birth: 15th August 2003
+Date of Birth: 10 March 2007
 Gender: Male
 Nationality: Indian
 Religion: Islam
@@ -210,14 +188,13 @@ Address: 123, Tech Street, New Delhi, India
       const blob = new Blob([biodataContent], { type: 'text/plain' });
       const link = document.createElement('a');
       link.href = URL.createObjectURL(blob);
-      link.download = 'biodata.txt';
+      link.download = 'Anas_Biodata.txt';
       link.click();
     });
   </script>
 
 </body>
 </html>
-
 
 
 
