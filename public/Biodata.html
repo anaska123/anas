@@ -2,16 +2,20 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Biodata | Anas</title>
   <style>
-    /* Base */
-    * { box-sizing: border-box; margin: 0; padding: 0; }
+    /* Reset & Base */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       background: linear-gradient(135deg, #00c9a7, #92fe9d);
+      color: #111;
       min-height: 100vh;
-      color: #222;
     }
 
     /* Navigation */
@@ -22,13 +26,13 @@
       position: sticky;
       top: 0;
       z-index: 100;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
     }
     nav a {
       color: #fff;
       margin: 0 20px;
       text-decoration: none;
       font-weight: 600;
+      letter-spacing: 0.5px;
       font-size: 16px;
       transition: all 0.3s ease;
     }
@@ -49,9 +53,9 @@
       border-bottom: 3px solid #ffde59;
     }
 
-    /* Section */
+    /* Section Card */
     section {
-      max-width: 900px;
+      max-width: 850px;
       margin: 60px auto;
       background: rgba(255,255,255,0.95);
       padding: 50px 40px;
@@ -81,7 +85,7 @@
       height: 180px;
       border-radius: 50%;
       object-fit: cover;
-      margin-bottom: 25px;
+      margin-bottom: 30px;
       border: 5px solid #00c9a7;
       box-shadow: 0 6px 25px rgba(0,0,0,0.25);
       transition: transform 0.4s ease, box-shadow 0.4s ease;
@@ -91,33 +95,34 @@
       box-shadow: 0 12px 35px rgba(0,0,0,0.35);
     }
 
-    /* Table */
+    /* Biodata Table */
     .biodata-table {
       margin: 30px auto;
       width: 100%;
       max-width: 650px;
       border-collapse: collapse;
       font-size: 18px;
-      color: #333;
+      color: #444;
+      text-align: left;
     }
     .biodata-table td {
-      padding: 12px 15px;
+      padding: 12px 10px;
       border-bottom: 1px solid #ddd;
-      transition: background 0.3s ease;
-    }
-    .biodata-table tr:hover td {
-      background: rgba(0,201,167,0.1);
     }
     .biodata-table td:first-child {
       font-weight: bold;
-      color: #00c9a7;
       width: 40%;
+      color: #222;
     }
+
+    /* Highlighting */
+    b, strong { color: #00c9a7; }
+    i, em { color: #ff6f61; }
 
     /* Download Button */
     .download-btn {
       background-color: #00c9a7;
-      color: white;
+      color: #fff;
       font-size: 18px;
       padding: 12px 25px;
       border: none;
@@ -145,27 +150,65 @@
   </nav>
 
   <marquee behavior="scroll" direction="left">
-    Welcome to <strong>Anas'</strong> Portfolio — explore <em>skills</em>, <em>projects</em>, and my <em>journey in web development</em>!
+    Welcome to <strong>Anas'</strong> Portfolio — explore my <em>web development</em> journey, <em>creative design</em>, and <em>projects</em>!
   </marquee>
 
   <section>
-    <img src="images.jfif" alt="Profile Photo" class="profile-img" />
+    <img src="C:\Users\hp\Downloads\image.jpg.jpeg" alt="Profile Photo" class="profile-img" />
 
     <h1>Biodata</h1>
     <table class="biodata-table">
-      <tr><td>Full Name</td><td>Anas</td></tr>
-      <tr><td>Date of Birth</td><td>10 March 2007</td></tr>
-      <tr><td>Gender</td><td>Male</td></tr>
-      <tr><td>Nationality</td><td>Indian</td></tr>
-      <tr><td>Religion</td><td>Islam</td></tr>
-      <tr><td>Qualification</td><td>BCA (Bachelor of Computer Applications)</td></tr>
-      <tr><td>Skills</td><td>HTML, CSS, JavaScript, Python, UI Design</td></tr>
-      <tr><td>Languages Known</td><td>English, Hindi, Urdu</td></tr>
-      <tr><td>Hobbies</td><td>Gaming, Coding, Designing</td></tr>
-      <tr><td>Contact</td><td>anas@example.com | +91 9876543210</td></tr>
-      <tr><td>Address</td><td>123, Tech Street, New Delhi, India</td></tr>
+      <tr>
+        <td>Full Name</td>
+        <td>Anas</td>
+      </tr>
+      <tr>
+        <td>Date of Birth</td>
+        <td>10 March 2007</td>
+      </tr>
+      <tr>
+        <td>Gender</td>
+        <td>Male</td>
+      </tr>
+      <tr>
+        <td>Nationality</td>
+        <td>Indian</td>
+      </tr>
+      <tr>
+        <td>Religion</td>
+        <td>Islam</td>
+      </tr>
+      <tr>
+        <td>Qualification</td>
+        <td>BCA 1st Year</td>
+      </tr>
+      <tr>
+        <td>Skills</td>
+        <td>HTML, CSS, JavaScript, Python, UI Design</td>
+      </tr>
+      <tr>
+        <td>Languages Known</td>
+        <td>English, Hindi, Urdu</td>
+      </tr>
+      <tr>
+        <td>Hobbies</td>
+        <td>Gaming, Coding, Designing, Learning new technologies</td>
+      </tr>
+      <tr>
+        <td>Height / Weight</td>
+        <td>182 cm / 50 kg (Working to gain healthy physique)</td>
+      </tr>
+      <tr>
+        <td>Contact</td>
+        <td>anas@example.com | +91 9876543210</td>
+      </tr>
+      <tr>
+        <td>Address</td>
+        <td>Kochi, Kerala, India</td>
+      </tr>
     </table>
 
+    <!-- Download Button -->
     <a href="#" class="download-btn" id="downloadBiodata">Download Biodata</a>
   </section>
 
@@ -177,12 +220,13 @@ Date of Birth: 10 March 2007
 Gender: Male
 Nationality: Indian
 Religion: Islam
-Qualification: BCA (Bachelor of Computer Applications)
+Qualification: BCA 1st Year
 Skills: HTML, CSS, JavaScript, Python, UI Design
 Languages Known: English, Hindi, Urdu
-Hobbies: Gaming, Coding, Designing
+Hobbies: Gaming, Coding, Designing, Learning new technologies
+Height / Weight: 182 cm / 50 kg (Working to gain healthy physique)
 Contact: anas@example.com | +91 9876543210
-Address: 123, Tech Street, New Delhi, India
+Address: Kochi, Kerala, India
       `;
       
       const blob = new Blob([biodataContent], { type: 'text/plain' });
@@ -195,7 +239,6 @@ Address: 123, Tech Street, New Delhi, India
 
 </body>
 </html>
-
 
 
 
